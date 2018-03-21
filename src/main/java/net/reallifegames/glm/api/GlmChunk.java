@@ -38,14 +38,13 @@ public interface GlmChunk {
     long getChunkGenerationTime();
 
     /**
-     * @return the chunk data which the client will render. This data should be compressed using Gzip.
+     * @return the chunk data which the client will render.
      */
     @Nonnull
     String getChunkData();
 
     /**
      * @return The chunk height data which the client can use for positioning.
-     * This data should be compressed using Gzip.
      */
     @Nonnull
     String getChunkHeightData();

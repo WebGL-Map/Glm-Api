@@ -42,4 +42,9 @@ public interface WsServerCommand {
      * @param commandNode the {@link JsonNode} for the command and parameters.
      */
     void handle(@Nonnull final WebSocket connection, @Nonnull final JsonNode commandNode);
+
+    /**
+     * @return time in milliseconds before this command should be allowed to be run again.
+     */
+    long getInterval();
 }
