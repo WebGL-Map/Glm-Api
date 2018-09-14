@@ -38,6 +38,12 @@ public interface GlmChunk {
     long getChunkGenerationTime();
 
     /**
+     * @return the id / type of this glm chunk.
+     */
+    @Nonnull
+    String getId();
+
+    /**
      * @return the data which the client will render.
      */
     @Nonnull
