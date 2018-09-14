@@ -38,14 +38,29 @@ public interface GlmChunk {
     long getChunkGenerationTime();
 
     /**
-     * @return the chunk data which the client will render.
+     * @return the data which the client will render.
      */
     @Nonnull
-    String getChunkData();
+    String getBlockData();
 
     /**
-     * @return The chunk height data which the client can use for positioning.
+     * @return The height data which the client can use for positioning.
      */
     @Nonnull
-    String getChunkHeightData();
+    String getBlockHeightData();
+
+    /**
+     * The range is from 0 to 65535. 0 should be the bottom north west corner and 65535 should be the top south east
+     * corner. The indices should proceed west to east then north to south then bottom to top.
+     *
+     * @return The block index data which the client can use for positioning.
+     */
+    @Nonnull
+    String getBlockIndices();
+
+    /**
+     * @return The block biome data which the client can use for rendering.
+     */
+    @Nonnull
+    String getBlockBiomeData();
 }
