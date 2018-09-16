@@ -50,12 +50,6 @@ public interface GlmChunk {
     String getBlockData();
 
     /**
-     * @return The height data which the client can use for positioning.
-     */
-    @Nonnull
-    String getBlockHeightData();
-
-    /**
      * The range is from 0 to 65535. 0 should be the bottom north west corner and 65535 should be the top south east
      * corner. The indices should proceed west to east then north to south then bottom to top.
      *
